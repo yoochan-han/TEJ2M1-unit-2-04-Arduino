@@ -1,7 +1,7 @@
 /*
   blink program with breadboard
 
-  created on Mar 2025
+  created on Feb 2025
   by yoochan Han
 */
 
@@ -18,7 +18,8 @@ void setup()
 }
 
 void loop()
-{
+{ 
+  //red, green, blue, then red-green, green-blue, blue-red and finally red-green-blue
   digitalWrite(PIN_11, HIGH);
   digitalWrite(PIN_12, LOW);
   digitalWrite(PIN_13, LOW);
@@ -29,6 +30,22 @@ void loop()
   delay(1000); // Wait for a second
   digitalWrite(PIN_11, LOW);
   digitalWrite(PIN_12, LOW);
+  digitalWrite(PIN_13, HIGH);
+  delay(1000); // Wait for a second
+  digitalWrite(PIN_11, HIGH);
+  digitalWrite(PIN_12, HIGH);
+  digitalWrite(PIN_13, LOW);
+  delay(1000); // Wait for a second
+  digitalWrite(PIN_11, LOW);
+  digitalWrite(PIN_12, HIGH);
+  digitalWrite(PIN_13, HIGH);
+  delay(1000); // Wait for a second
+  digitalWrite(PIN_11, HIGH);
+  digitalWrite(PIN_12, LOW);
+  digitalWrite(PIN_13, HIGH);
+  delay(1000); // Wait for a second
+  digitalWrite(PIN_11, HIGH);
+  digitalWrite(PIN_12, HIGH);
   digitalWrite(PIN_13, HIGH);
   delay(1000); // Wait for a second
 }
